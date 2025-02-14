@@ -12,44 +12,9 @@ class HomeScreen extends StatelessWidget {
     return BlocProvider<HomeViewModel>(
       create: (context) => homeViewModel,
       child: Scaffold(
-        body: SafeArea(
-            child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: [
-            InkWell(
-              onTap: () {
-                homeViewModel.getCategories();
-              },
-              child: Center(
-                  child: Text(
-                "Hello,World",
-                style: TextStyle(
-                  fontSize: 24,
-                ),
-              )),
-            ),
-            BlocBuilder<HomeViewModel, HomeState>(builder: (context, state) {
-              switch (state) {
-                case HomeLoadingState():
-                case HomeInitState():
-                  return Center(child: CircularProgressIndicator());
-                case HomeSuccessState():
-                  return Expanded(
-                    child: ListView.builder(
-                      itemCount: (state.catList.data ?? []).length,
-                      itemBuilder: (context, index) => ListTile(
-                        title: Text(
-                          (state.catList.data ?? [])[index].name ?? "No Product -----",
-                        ),
-                      ),
-                    ),
-                  );
-                case HomeErrorState():
-                  return Text(state.exp.exception.toString());
-              }
-            })
-          ],
-        )),
+        body: Center(
+          child: Text("jjjjjjjjj"),
+        ),
       ),
     );
   }
