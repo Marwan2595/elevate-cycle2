@@ -13,7 +13,7 @@ class HomeScreen extends StatelessWidget {
       create: (context) => homeViewModel,
       child: Scaffold(
         body: Center(
-          child: Text("jjjjjjjjj"),
+          child: Text("wytqwuytquwetuqwyteuyqwtuyqwet"),
         ),
       ),
     );
