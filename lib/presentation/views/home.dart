@@ -39,7 +39,7 @@ class HomeScreen extends StatelessWidget {
                       itemCount: (state.catList.data ?? []).length,
                       itemBuilder: (context, index) => ListTile(
                         title: Text(
-                          (state.catList.data ?? [])[index].name ?? "No Product -----",
+                          (state.catList.data ?? [])[index].name ?? "Cat Name",
                         ),
                       ),
                     ),
